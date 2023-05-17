@@ -11,7 +11,7 @@ const open = ref(false)
     <div class="flex items-center gap-x-8 md:gap-x-16">
       <RouterLink @click="open = false" class="relative z-30 flex items-center gap-x-3" to="/">
         <img class="w-8 lg:w-14 h-8 lg:h-14" src="/images/logo.svg" alt="logo" />
-        <p class="block l font-semibold mt-0.5 tracking-widest text-sm">The Sugiharto</p>
+        <p class="block lg:hidden font-semibold mt-0.5 tracking-widest text-sm">The Sugiharto</p>
       </RouterLink>
       <nav
         class="absolute lg:static top-0 left-0 flex flex-col lg:flex-row w-full pt-28 pb-12 space-y-8 lg:space-y-0 lg:py-0 bg-dark z-20 items-center gap-x-8 md:gap-x-16 transition-transform duration-500"
