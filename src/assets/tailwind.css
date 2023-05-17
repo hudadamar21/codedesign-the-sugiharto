@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply tracking-wide
+  }
   body {
     @apply font-inter bg-dark text-white
   }
