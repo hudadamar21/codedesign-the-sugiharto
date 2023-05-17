@@ -10,11 +10,11 @@
   }
 
   html,body {
-    @apply overflow-x-hidden
+    @apply overflow-y-auto overflow-x-hidden 
   }
 
   body {
-    @apply font-inter bg-dark text-white
+    @apply font-inter bg-dark text-white min-h-screen
   }
 }
 
