@@ -3,3 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter bg-dark text-white
+  }
+}
+
+@layer components {
+  .main-container {
+    @apply max-w-screen-lg mx-auto px-5 md:px-0
+  }
+}
