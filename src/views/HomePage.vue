@@ -16,7 +16,7 @@ import IconFlagIndonesia from '@/components/icons/IconFlagIndonesia.vue'
         Saya seorang software-engineer, pembaca buku, warga NU, dan juga murid (online) Pak
         Fahruddin Faiz.
       </p>
-      <RouterLink to="/overview" class="group/goto hover:opacity-90 mt-8 mb-14 flex items-center gap-x-4 font-semibold transition">
+      <RouterLink to="/overview" class="group/goto hover:opacity-90 mt-8 mb-14 flex items-center gap-x-4 w-max font-semibold transition">
         Go To Overview
         <div class="group-hover/goto:translate-x-1 transition">
           <IconArrowRight />
