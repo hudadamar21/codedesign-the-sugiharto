@@ -11,6 +11,9 @@ module.exports = {
           green: '#2BA386'
         }
       },
+      fontFamily: {
+        inter: 'Inter, sans-serif'
+      }
     }
   },
   plugins: []
