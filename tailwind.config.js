@@ -13,6 +13,9 @@ module.exports = {
       },
       fontFamily: {
         inter: 'Inter, sans-serif'
+      },
+      fontSize: {
+        '4xl': ['2.5rem', { lineHeight: '2.5rem' }]
       }
     }
   },
