@@ -4,7 +4,7 @@ import { overview } from '@/data/overview'
 </script>
 
 <template>
-  <main class="relative main-container grid grid-cols-1 lg:grid-cols-2 items-start pt-8 pb-28 lg:pb-0 overflow-x-hidden">
+  <main class="relative main-container grid grid-cols-1 lg:grid-cols-2 items-start pt-8 pb-28 lg:pb-0">
     <div class="order-2 lg:order-1">
       <div class="relative mb-7">
         <h1 class="realtive z-10 text-4xl font-bold">Overview</h1>

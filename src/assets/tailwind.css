@@ -8,6 +8,11 @@
   * {
     @apply tracking-wide
   }
+
+  html,body {
+    @apply overflow-x-hidden
+  }
+
   body {
     @apply font-inter bg-dark text-white
   }
