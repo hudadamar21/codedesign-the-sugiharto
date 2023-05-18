@@ -1,9 +1,13 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { ref, computed } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 import IconMenu from './icons/IconMenu.vue'
 
 const open = ref(false)
+
+const route = useRoute()
+
+const currentPath = computed(() => route.path.replace('/', ''))
 </script>
 
 <template>
@@ -20,25 +24,29 @@ const open = ref(false)
         <RouterLink
           @click="open = false"
           to="/overview"
-          class="font-medium tracking-wide text-white/60 hover:text-white transition"
+          class="font-medium tracking-wide hover:text-white transition"
+          :class="currentPath === 'overview' ? 'text-white' : 'text-white/60'"
           >Overview</RouterLink
         >
         <RouterLink
           @click="open = false"
           to="/skills"
-          class="font-medium tracking-wide text-white/60 hover:text-white transition"
+          class="font-medium tracking-wide hover:text-white transition"
+          :class="currentPath === 'skills' ? 'text-white' : 'text-white/60'"
           >Skills</RouterLink
         >
         <RouterLink
           @click="open = false"
           to="/projects"
-          class="font-medium tracking-wide text-white/60 hover:text-white transition"
+          class="font-medium tracking-wide hover:text-white transition"
+          :class="currentPath === 'projects' ? 'text-white' : 'text-white/60'"
           >Projects</RouterLink
         >
         <RouterLink
           @click="open = false"
           to="/contact"
-          class="font-medium tracking-wide text-white/60 hover:text-white transition"
+          class="font-medium tracking-wide hover:text-white transition"
+          :class="currentPath === 'contact' ? 'text-white' : 'text-white/60'"
           >Contact</RouterLink
         >
         <RouterLink
