@@ -52,30 +52,46 @@ const closePopupProject = (el) => {
     <div class="col-span-7 grid grid-cols-1 md:grid-cols-2 gap-5 mt-16 md:mt-0">
       <CardNormal
         v-for="(project, i) of projectList"
-        :key="i"
+        class="bg-white/5 p-5 pb-7"
+        @imageClick="() => openPopupProject(project)"
         :title="project.name"
         :sub-title="project.category"
         :image="project.image"
+        :key="i"
         subTitleUppercase
-        @imageClick="() => openPopupProject(project)"
-        class="bg-white/5 p-5 pb-7"
+        imageHover
       />
     </div>
 
     <!-- popup -->
-    <div
-      v-if="selectedProject"
-      @click="closePopupProject"
-      class="bg-black/60 backdrop-blur fixed inset-0 flex items-center justify-center z-50"
-    >
-      <div class="p-5 pb-7 rounded-lg text-center main-container w-full">
-        <CardNormal
-          :title="selectedProject.name"
-          :sub-title="selectedProject.category"
-          :image="selectedProject.image"
-          subTitleUppercase
-        />
+    <Transition>
+      <div
+        v-if="selectedProject"
+        @click="closePopupProject"
+        class="bg-black/60 fixed inset-0 flex items-center justify-center z-50"
+      >
+        <div class="image p-5 pb-7 rounded-lg text-center main-container w-full">
+          <CardNormal
+            :title="selectedProject.name"
+            :sub-title="selectedProject.category"
+            :image="selectedProject.image"
+            subTitleUppercase
+          />
+        </div>
       </div>
-    </div>
+    </Transition>
   </main>
 </template>
+
+<style>
+.v-enter-active,
+.v-leave-active {
+  transition: 0.5s ease;
+  transition-property: opacity transform;
+}
+
+.v-enter-from,
+.v-leave-to {
+  @apply translate-y-3 opacity-0;
+}
+</style>
