@@ -6,12 +6,7 @@ import { overview } from '@/data/overview'
 <template>
   <main class="relative main-container grid grid-cols-1 lg:grid-cols-2 items-start pt-8 pb-28 lg:pb-0">
     <div class="order-2 lg:order-1">
-      <div class="relative mb-7">
-        <h1 class="realtive z-10 text-4xl font-bold">Overview</h1>
-        <div class="absolute -top-9 -left-16 text-[100px] font-bold opacity-[3%] leading-none">
-          Overview
-        </div>
-      </div>
+      <SectionTitle name="Overview" />
       <p class="opacity-60 text-base lg:text-lg font-light w-full lg:w-[80%] mt-14">
         {{ overview.description }}
       </p>
