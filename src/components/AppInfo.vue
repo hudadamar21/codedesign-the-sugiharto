@@ -5,7 +5,7 @@ const open = ref(false)
 </script>
 
 <template>
-  <div class="fixed bottom-5 left-5">
+  <div class="fixed bottom-5 left-5 z-30">
     <button
       @click="open = !open"
       class="h-10 w-10 rounded-full bg-white text-black/60 flex items-center justify-center hover:scale-105 transition cursor-pointer"
@@ -21,7 +21,7 @@ const open = ref(false)
     <Transition>
       <div
         v-if="open"
-        class="absolute bottom-full mb-4 p-6 rounded-xl left-0 space-y-3 bg-white shadow-lg text-sm text-black/60"
+        class="absolute bottom-full mb-4 p-6 rounded-xl left-0 space-y-3 bg-white shadow-lg text-sm text-black/60 z-30"
       >
         <div>
           this website is challenge from: <br />
