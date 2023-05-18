@@ -53,11 +53,12 @@ const closePopupProject = (el) => {
       <CardNormal
         v-for="(project, i) of projectList"
         :key="i"
-        @click="() => openPopupProject(project)"
-        :title="project.title"
+        :title="project.name"
         :sub-title="project.category"
         :image="project.image"
-        class="bg-white/5"
+        subTitleUppercase
+        @imageClick="() => openPopupProject(project)"
+        class="bg-white/5 p-5 pb-7"
       />
     </div>
 
@@ -72,6 +73,7 @@ const closePopupProject = (el) => {
           :title="selectedProject.name"
           :sub-title="selectedProject.category"
           :image="selectedProject.image"
+          subTitleUppercase
         />
       </div>
     </div>
