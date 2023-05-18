@@ -3,15 +3,26 @@ defineProps({
   title: String,
   subTitle: String,
   image: String,
+  subTitleUppercase: Boolean,
+  noPadding: Boolean
 })
+
+defineEmits(['imageClick'])
 </script>
 
 <template>
-  <div class="p-5 pb-7 rounded-lg text-center">
-    <img :src="image" class="aspect-video w-full rounded-lg mb-7" :alt="title" />
-    <h2 class="mb-3">
+  <div class="rounded-lg text-center">
+    <img
+      @click="$emit('imageClick')"
+      :src="image"
+      class="aspect-video w-full rounded-lg mb-5"
+      :alt="title"
+    />
+    <h2 class="mb-3 tracking-wider">
       {{ title }}
     </h2>
-    <p class="text-xs text-white/60 uppercase">{{ subTitle }}</p>
+    <p class="text-xs text-white/60 px-5 tracking-wider" :class="subTitleUppercase ? 'uppercase' : ''">
+      {{ subTitle }}
+    </p>
   </div>
 </template>
