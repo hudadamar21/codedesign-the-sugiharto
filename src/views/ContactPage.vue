@@ -29,7 +29,7 @@ import { contact } from '../data/contact'
         <div class="p-6 rounded-lg bg-white/5 w-[260px] leading-relaxed border border-white/10">
           “{{ contact.quote }}”
         </div>
-        <div class="absolute top-full right-5 lg:-right-16 mt-7">
+        <div class="absolute top-full right-5 lg:-right-16 mt-6">
           <div
             class="aspect-square w-[110px] rounded-full bg-white/5 flex items-center justify-center"
           >
