@@ -1,4 +1,5 @@
 <script setup>
+import SectionTitle from '../components/SectionTitle.vue'
 import BioList from '../components/BioList.vue'
 import { overview } from '@/data/overview'
 </script>
